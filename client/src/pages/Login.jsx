@@ -11,10 +11,13 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("https://rbs-backup.onrender.com/auth/login", {
-        email,
-        password,
-      });
+      const res = await axios.post(
+        "https://rbs-backup.onrender.com/auth/login",
+        {
+          email,
+          password,
+        }
+      );
 
       sessionStorage.setItem("token", res.data.token);
       sessionStorage.setItem("user", JSON.stringify(res.data.user));
@@ -58,6 +61,9 @@ const Login = () => {
         >
           Login
         </button>
+        <span onClick={() => Navigate("/signup")} className="text-xs text-blue-500 underline cursor-pointer">
+          Don't Have an account? Signup
+        </span>
       </form>
     </div>
   );

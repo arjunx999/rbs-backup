@@ -113,7 +113,7 @@ const Menu = () => {
     <div className="h-screen w-full bg-gray-300 p-5 flex flex-col gap-6">
       {/* TOP BAR */}
       <div className="flex justify-between items-center">
-        <div className="bg-white px-4 py-2 rounded-lg shadow font-semibold">
+        <div onClick={() => Navigate(-1)} className="cursor-pointer bg-white px-4 py-2 rounded-lg shadow font-semibold">
           {restaurant?.toUpperCase()}
         </div>
 

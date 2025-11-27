@@ -58,7 +58,7 @@ export const billOrder = async (req, res) => {
 
 export const getAllOrders = async (req, res) => {
   try {
-    const restaurant = req.user.restaurant;
+    const restaurant = req.user.restaurant._id;
 
     const orders = await Order.find({ restaurant });
 

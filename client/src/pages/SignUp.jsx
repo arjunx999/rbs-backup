@@ -14,12 +14,15 @@ const SignUp = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("https://rbs-backup.onrender.com/auth/signup", {
-        name,
-        restaurant,
-        email,
-        password,
-      });
+      const res = await axios.post(
+        "https://rbs-backup.onrender.com/auth/signup",
+        {
+          name,
+          restaurant,
+          email,
+          password,
+        }
+      );
 
       console.log(res.data);
       alert("Signup successful, Login to continue");
@@ -80,6 +83,12 @@ const SignUp = () => {
         >
           Create Account
         </button>
+        <span
+          onClick={() => Navigate("/")}
+          className="text-xs text-blue-500 underline cursor-pointer"
+        >
+          Already have an account? Login
+        </span>
       </form>
     </div>
   );
