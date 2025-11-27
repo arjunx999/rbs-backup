@@ -36,7 +36,7 @@ const Menu = () => {
 
   const fetchDishes = async (token) => {
     try {
-      const res = await axios.get("http://localhost:9999/dish/get-all", {
+      const res = await axios.get("https://rbs-backup.onrender.com/dish/get-all", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setDishes(res.data.dishes);
@@ -56,7 +56,7 @@ const Menu = () => {
 
     try {
       await axios.post(
-        "http://localhost:9999/dish/add",
+        "https://rbs-backup.onrender.com/dish/add",
         {
           name: dishName,
           description: desc,
@@ -90,7 +90,7 @@ const Menu = () => {
     const token = sessionStorage.getItem("token");
 
     try {
-      await axios.delete(`http://localhost:9999/dish/delete/${id}`, {
+      await axios.delete(`https://rbs-backup.onrender.com/dish/delete/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

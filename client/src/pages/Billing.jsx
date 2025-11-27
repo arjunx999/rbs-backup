@@ -21,7 +21,7 @@ const Billing = () => {
 
   const fetchDishes = async (token) => {
     try {
-      const res = await axios.get("http://localhost:9999/dish/get-all", {
+      const res = await axios.get("https://rbs-backup.onrender.com/dish/get-all", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -56,7 +56,7 @@ const Billing = () => {
       const dishIds = selected.map((d) => d._id);
 
       const res = await axios.post(
-        "http://localhost:9999/order/bill-order",
+        "https://rbs-backup.onrender.com/order/bill-order",
         { dishes: dishIds },
         {
           headers: { Authorization: `Bearer ${token}` },

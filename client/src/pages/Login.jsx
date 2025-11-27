@@ -11,7 +11,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:9999/auth/login", {
+      const res = await axios.post("https://rbs-backup.onrender.com/auth/login", {
         email,
         password,
       });

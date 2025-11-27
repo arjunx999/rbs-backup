@@ -14,7 +14,7 @@ const SignUp = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:9999/auth/signup", {
+      const res = await axios.post("https://rbs-backup.onrender.com/auth/signup", {
         name,
         restaurant,
         email,
